@@ -26,28 +26,34 @@ return [
             'url' => env('OLLAMA_URL', 'http://localhost:11434'),
         ],
         'mistral' => [
-            'api_key' => env('MISTRAL_API_KEY', ''),
-            'url' => env('MISTRAL_URL', 'https://api.mistral.ai/v1'),
-        ],
-        'groq' => [
-            'api_key' => env('GROQ_API_KEY', ''),
-            'url' => env('GROQ_URL', 'https://api.groq.com/openai/v1'),
-        ],
-        'xai' => [
-            'api_key' => env('XAI_API_KEY', ''),
-            'url' => env('XAI_URL', 'https://api.x.ai/v1'),
-        ],
-        'gemini' => [
-            'api_key' => env('GEMINI_API_KEY', ''),
-            'url' => env('GEMINI_URL', 'https://generativelanguage.googleapis.com/v1beta/models'),
-        ],
-        'deepseek' => [
-            'api_key' => env('DEEPSEEK_API_KEY', ''),
-            'url' => env('DEEPSEEK_URL', 'https://api.deepseek.com/v1'),
-        ],
-        'voyageai' => [
-            'api_key' => env('VOYAGEAI_API_KEY', ''),
-            'url' => env('VOYAGEAI_URL', 'https://api.voyageai.com/v1'),
+            'api_key' => env('MISTRAL_API_KEY'),
+            'base_uri' => env('MISTRAL_BASE_URI', 'https://api.mistral.ai/v1'),
+            'default_model' => env('MISTRAL_DEFAULT_MODEL', 'mistral-tiny'),
+            'default_options' => [
+                'temperature' => 0.7,
+                'max_tokens' => 4096,
+            ],
+
+            'groq' => [
+                'api_key' => env('GROQ_API_KEY', ''),
+                'url' => env('GROQ_URL', 'https://api.groq.com/openai/v1'),
+            ],
+            'xai' => [
+                'api_key' => env('XAI_API_KEY', ''),
+                'url' => env('XAI_URL', 'https://api.x.ai/v1'),
+            ],
+            'gemini' => [
+                'api_key' => env('GEMINI_API_KEY', ''),
+                'url' => env('GEMINI_URL', 'https://generativelanguage.googleapis.com/v1beta/models'),
+            ],
+            'deepseek' => [
+                'api_key' => env('DEEPSEEK_API_KEY', ''),
+                'url' => env('DEEPSEEK_URL', 'https://api.deepseek.com/v1'),
+            ],
+            'voyageai' => [
+                'api_key' => env('VOYAGEAI_API_KEY', ''),
+                'url' => env('VOYAGEAI_URL', 'https://api.voyageai.com/v1'),
+            ],
         ],
     ],
 ];
